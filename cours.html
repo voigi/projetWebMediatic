@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Learning</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <script src="js/footer.js" defer></script>
+    <!-- Ajout de Font Awesome pour les icônes d'étoiles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <nav>
+      <div id="logo">
+        <a href="index.html"
+          ><img
+            src="images/logoNav.png"
+            alt="Logo"
+            width="200"
+            height="24"
+        /></a>
+      </div>
+      <ul>
+        <li class="dropdown">
+          <a href="#">Nos Services</a>
+          <ul class="dropdown-content">
+             <li><a href="cours.html">E-Learning</a></li> 
+            <li><a href="ia.html">IA</a></li>  
+          </ul>
+        </li>
+        <li><a href="team.html">Notre Team</a></li>
+        <li><a href="contact.html">Nous contacter</a></li>
+      </ul>
+    </nav>
+
+    <main id="page">
+      <h1 class="page-title">Nos Formations Populaires</h1>
+
+      <section class="courses-section">
+        <div class="course-list">
+          <div class="course-row">
+            <!-- Card 1: Développement Web -->
+            <input
+              type="checkbox"
+              id="course1"
+              class="course-toggle"
+              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked)"
+            />
+            <label for="course1" class="course-card">
+              <img
+                src="images/developpementWeb.jpeg"
+                alt="plusieurs écrans d'ordinateurs"
+              />
+              <span class="course-content">
+                <span class="course-title">Développement Web Avancé</span>
+                <span class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="far fa-star"></i>
+                </span>
+                <span class="course-description"
+                  >Maîtrisez les frameworks modernes et construisez des
+                  applications web robustes.</span
+                >
+              </span>
+            </label>
+            <div class="course-detail">
+              <h2>Développement Web Avancé</h2>
+              <p>
+                Contenu détaillé de la leçon : vous apprendrez React, Vue,
+                Node.js, les APIs REST, et comment déployer une application
+                complète.
+              </p>
+              <p><strong>Durée :</strong> 8 semaines</p>
+              <p><strong>Niveau :</strong> Intermédiaire à Avancé</p>
+              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
+              <button
+                href="#"
+                class="close-btn"
+                onclick="document.getElementById('course1').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
+                >Fermer</button
+              >
+            </div>
+
+            <!-- Card 2: Intelligence Artificielle -->
+            <input
+              type="checkbox"
+              id="course2"
+              class="course-toggle"
+              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked)"
+            />
+            <label for="course2" class="course-card">
+              <img
+                src="images/ia.jpeg"
+                alt="dessin de cerveau et les lettres IA"
+              />
+              <span class="course-content">
+                <span class="course-title">Introduction à l'IA</span>
+                <span class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star-half-alt"></i>
+                </span>
+                <span class="course-description"
+                  >Explorez les fondements de l'intelligence artificielle et ses
+                  applications.</span
+                >
+              </span>
+            </label>
+            <div class="course-detail">
+              <h2>Introduction à l'IA</h2>
+              <p>
+                Contenu détaillé de la leçon : découvrez le machine learning, le
+                deep learning, et les réseaux de neurones.
+              </p>
+              <p><strong>Durée :</strong> 6 semaines</p>
+              <p><strong>Niveau :</strong> Débutant</p>
+              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
+              <button
+                href="#"
+                class="close-btn"
+                onclick="document.getElementById('course2').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
+                >Fermer</button
+              >
+            </div>
+
+            <!-- Card 3: Cybersécurité -->
+            <input
+              type="checkbox"
+              id="course3"
+              class="course-toggle"
+              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked)"
+            />
+            <label for="course3" class="course-card">
+              <img
+                src="images/cybersecurite.jpeg"
+                alt="bouclier de sécurité avec un cadenas fermé dessus entouré de têtes de mort rouge"
+              />
+              <span class="course-content">
+                <span class="course-title">Cybersécurité</span>
+                <span class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="far fa-star"></i>
+                </span>
+                <span class="course-description"
+                  >Protégez les systèmes d'information contre les
+                  cyberattaques.</span
+                >
+              </span>
+            </label>
+            <div class="course-detail">
+              <h2>Cybersécurité</h2>
+              <p>
+                Contenu détaillé de la leçon : apprenez les techniques de
+                pentesting, la cryptographie, et la sécurisation des réseaux.
+              </p>
+              <p><strong>Durée :</strong> 10 semaines</p>
+              <p><strong>Niveau :</strong> Intermédiaire</p>
+              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
+              <button
+                href="#"
+                class="close-btn"
+                onclick="document.getElementById('course3').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
+                >Fermer</button
+              >
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="course-row">
+            <!-- Card 4: Marketing Digital -->
+            <input
+              type="checkbox"
+              id="course4"
+              class="course-toggle"
+              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked)"
+            />
+            <label for="course4" class="course-card">
+              <img
+                src="images/marketingDigital.jpeg"
+                alt="portable entouré de plusieurs icones de marketing"
+              />
+              <span class="course-content">
+                <span class="course-title">Marketing Digital</span>
+                <span class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="far fa-star"></i
+                  ><i class="far fa-star"></i>
+                </span>
+                <span class="course-description"
+                  >Apprenez à promouvoir efficacement des produits et services
+                  en ligne.</span
+                >
+              </span>
+            </label>
+            <div class="course-detail">
+              <h2>Marketing Digital</h2>
+              <p>
+                Contenu détaillé de la leçon : SEO, SEM, marketing de contenu et
+                réseaux sociaux.
+              </p>
+              <p><strong>Durée :</strong> 5 semaines</p>
+              <p><strong>Niveau :</strong> Débutant</p>
+              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
+              <button
+                href="#"
+                class="close-btn"
+                onclick="document.getElementById('course4').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
+                >Fermer</button
+              >
+            </div>
+
+            <!-- Card 5: Design UI/UX -->
+            <input
+              type="checkbox"
+              id="course5"
+              class="course-toggle"
+              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked)"
+            />
+            <label for="course5" class="course-card">
+              <img
+                src="images/designUI.jpeg"
+                alt="deux smartphones en face à face qui communiquent"
+              />
+              <span class="course-content">
+                <span class="course-title">Design UI/UX</span>
+                <span class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="far fa-star"></i>
+                </span>
+                <span class="course-description"
+                  >Concevez des interfaces utilisateur intuitives et une
+                  expérience utilisateur optimale.</span
+                >
+              </span>
+            </label>
+            <div class="course-detail">
+              <h2>Design UI/UX</h2>
+              <p>
+                Contenu détaillé de la leçon : prototypage, wireframing, et
+                tests utilisateurs avec Figma.
+              </p>
+              <p><strong>Durée :</strong> 7 semaines</p>
+              <p><strong>Niveau :</strong> Intermédiaire</p>
+              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
+              <button
+                href="#"
+                class="close-btn"
+                onclick="document.getElementById('course5').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
+                >Fermer</button
+              >
+            </div>
+
+            <!-- Card 6: Gestion de Projet Agile -->
+            <input
+              type="checkbox"
+              id="course6"
+              class="course-toggle"
+              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked)"
+            />
+            <label for="course6" class="course-card">
+              <img
+                src="images/gestionProjet.jpeg"
+                alt="tableau de bord informatique de suivi de projet"
+              />
+              <span class="course-content">
+                <span class="course-title">Gestion de Projet Agile</span>
+                <span class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i
+                  ><i class="fas fa-star-half-alt"></i
+                  ><i class="far fa-star"></i>
+                </span>
+                <span class="course-description"
+                  >Adoptez les méthodologies Scrum et Kanban pour des projets
+                  réussis.</span
+                >
+              </span>
+            </label>
+            <div class="course-detail">
+              <h2>Gestion de Projet Agile</h2>
+              <p>
+                Contenu détaillé de la leçon : sprints, backlogs, et management
+                d'équipe avec Jira.
+              </p>
+              <p><strong>Durée :</strong> 4 semaines</p>
+              <p><strong>Niveau :</strong> Débutant à Intermédiaire</p>
+              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
+              <button
+                href="#"
+                class="close-btn"
+                onclick="document.getElementById('course6').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
+                >Fermer</button
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2025 Mon Entreprise. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </body>
+</html>

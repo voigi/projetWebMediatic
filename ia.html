@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <script src="js/footer.js" defer></script>
+    <title>Cours IA</title>
+  </head>
+
+  <body>
+    <nav>
+      <div id="logo">
+        <a href="index.html"
+          ><img
+            src="images/logoNav.png"
+            alt="Logo"
+            width="200"
+            height="24"
+        /></a>
+      </div>
+       <ul>
+        <li class="dropdown">
+          <a href="#">Nos Services</a>
+          <ul class="dropdown-content">
+             <li><a href="cours.html">E-Learning</a></li> 
+            <li><a href="ia.html">IA</a></li>  
+          </ul>
+        </li>
+        <li><a href="team.html">Notre Team</a></li>
+        <li><a href="contact.html">Nous contacter</a></li>
+      </ul>
+    </nav>
+
+    <main id="page">
+      <h1 class="page-title">Qu'est-ce que l'Intelligence Artificielle ?</h1>
+
+      <div id="introContact">
+        <p>
+          L'intelligence artificielle (IA) vise à simuler l'intelligence humaine
+          dans des systèmes informatiques.
+        </p>
+        <div class="info-ia-container">
+          <div class="info-ia">
+            <h2>Pourquoi utiliser l'IA ?</h2>
+            <p>
+              L'IA améliore l'efficacité, optimise les processus et aide à la
+              prise de décision en traitant de grandes quantités de données.
+              Elle automatise aussi les tâches répétitives.
+            </p>
+          </div>
+          <div class="info-ia">
+            <h2>Applications de l'IA</h2>
+            <p>
+              L'IA est utilisée dans la santé, la finance, le commerce, les
+              transports et le service client.
+            </p>
+          </div>
+        </div>
+        <p>
+          Nos cours d'IA couvrent ces sujets pour une compréhension approfondie.
+        </p>
+      </div>
+
+      <section class="courses-section">
+        <div class="course-list">
+          <div class="course-row">
+            <!-- Card 1: L'IA pour tous -->
+            <input
+              type="checkbox"
+              id="course1"
+              class="course-toggle"
+              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked); if(this.checked) { document.querySelector('.courses-section').scrollIntoView({ behavior: 'smooth' }); }"
+            />
+            <label for="course1" class="course-card">
+              <img
+                src="images/ia.jpeg"
+                alt="dessin de cerveau et les lettres IA"
+              />
+                  <span class="course-content">
+                <span class="course-title">Introduction à l'IA</span>
+                <span class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star-half-alt"></i>
+                </span>
+                <span class="course-description"
+                  >Explorez les fondements de l'intelligence artificielle et ses
+                  applications.</span
+                >
+              </span>
+            </label>
+        <div class="course-detail">
+              <h2>Introduction à l'IA</h2>
+              <p>
+                Contenu détaillé de la leçon : découvrez le machine learning, le
+                deep learning, et les réseaux de neurones.
+              </p>
+              <p><strong>Durée :</strong> 6 semaines</p>
+              <p><strong>Niveau :</strong> Débutant</p>
+              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
+              <button
+                href="#"
+                class="close-btn"
+                onclick="document.getElementById('course1').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
+                >Fermer</button
+              >
+            </div>
+
+            <!-- Card 2: Apprentissage Automatique -->
+            <input
+              type="checkbox"
+              id="course2"
+              class="course-toggle"
+              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked); if(this.checked) { document.querySelector('.courses-section').scrollIntoView({ behavior: 'smooth' }); }"
+            />
+            <label for="course2" class="course-card">
+              <img
+                src="images/stanford.jpeg"
+                alt="logo Stanford"
+              />
+              <span class="course-content">
+                <span class="course-title">Apprentissage Automatique</span>
+                <span class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </span>
+                <span class="course-description"
+                  >Un cours très reconnu pour les débutants à intermédiaires par
+                  l'Université de Stanford.</span
+                >
+              </span>
+            </label>
+            <div class="course-detail">
+              <h2>Apprentissage Automatique</h2>
+              <p>
+                Contenu détaillé de la leçon : Le cours de Machine Learning par
+                Andrew Ng de l'Université de Stanford, disponible sur Coursera.
+                Un cours très reconnu pour les débutants à intermédiaires.
+              </p>
+              <p><strong>Durée :</strong> 11 semaines</p>
+              <p><strong>Niveau :</strong> Débutant à Intermédiaire</p>
+              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
+              <button
+                href="#"
+                class="close-btn"
+                onclick="document.getElementById('course2').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
+                >Fermer</button
+              >
+            </div>
+
+            <!-- Card 3: Deep Learning Pratique -->
+            <input
+              type="checkbox"
+              id="course3"
+              class="course-toggle"
+              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked); if(this.checked) { document.querySelector('.courses-section').scrollIntoView({ behavior: 'smooth' }); }"
+            />
+            <label for="course3" class="course-card">
+              <img
+                src="images/deepLearningPratique.jpeg"
+                alt="dessin de cerveau avec des livres sur plusieurs niveaux d'IA"
+              />
+              <span class="course-content">
+                <span class="course-title">Deep Learning Pratique</span>
+                <span class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="far fa-star"></i>
+                </span>
+                <span class="course-description"
+                  >Une approche pratique pour construire et entraîner des
+                  modèles dès le début.</span
+                >
+              </span>
+            </label>
+            <div class="course-detail">
+              <h2>Deep Learning Pratique</h2>
+              <p>
+                Contenu détaillé de la leçon : Une approche pratique pour
+                construire et entraîner des modèles dès le début. Proposé par
+                Fast.ai. Une certaine expérience avec Python est supposée.
+              </p>
+              <p><strong>Durée :</strong> 7 semaines</p>
+              <p><strong>Niveau :</strong> Intermédiaire</p>
+              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
+              <button
+                href="#"
+                class="close-btn"
+                onclick="document.getElementById('course3').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
+                >Fermer</button
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2025 Mon Entreprise. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </body>
+</html>

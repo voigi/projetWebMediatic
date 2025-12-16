@@ -1,0 +1,522 @@
+/*Styles Globaux*/
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /*Police pour le body*/
+    color: #333; /* Couleur du texte */
+    background-color: #fff; /* Couleur de fond */
+}
+
+a {
+    color: white; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+    transition: color 0.3s ease; /* Transition douce pour le changement de couleur */
+}
+
+a:hover {
+    color: #98D7EC; /* Couleur au survol */
+}
+
+ h2, h3 {
+    margin-top: 0; /* Supprimer la marge supérieure */
+}
+
+img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+hr {
+    border: 0; /* Supprimer la bordure */
+    height: 1px; /* Hauteur de la ligne */
+    background-color: #ddd; /* Couleur de la ligne */
+    margin: 2rem 0; /* Espacement vertical */
+}
+
+#page {
+    display: flex; /* disposition flex*/
+    flex-direction: column;  /*en collonnes*/
+    align-items: center; 
+    justify-content: center;
+    width: 100%; 
+    margin: 0 auto; 
+    box-sizing: border-box;
+    position: relative; /* nécessaire pour le pseudo-élément */
+    background-size: 100%; /* Ajuste la taille de l'image de fond */
+}
+
+/* Pseudo-élément pour le fond avec opacité */
+#page::before {
+    content: "";
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-image: url("../images/fond.jpg"); /* Chemin vers l'image de fond */
+    background-size: cover; /* Ajuste la taille de l'image de fond */
+    background-position: center; /* Centre l'image de fond */
+    opacity: 0.5; /* ajuste ici l'opacité du fond */
+    z-index: -1; /* derrière le contenu */
+}
+
+/*Naviguation*/
+nav {
+    background-color: #333; /*couleur de fond*/
+    display: flex;  /* Utilisation de Flexbox */
+    justify-content: center;  /* Centrer les éléments horizontalement */
+    align-items: center;  /* Centrer les éléments verticalement */
+    padding: 0 1rem;  /* Espacement horizontal */
+}
+
+nav #logo {
+    position: absolute;  /* Positionnement absolu */
+    left: 2rem; /* Décalage depuis la gauche */
+}
+
+nav ul {
+    list-style-type: none; /* Supprimer les puces */ 
+    margin: 0; /* Supprimer les marges */
+    padding: 0; /* Supprimer les espacements */
+    display: flex; /* Utilisation de Flexbox */
+}
+
+nav ul li a {
+    display: block; /* Faire en sorte que le lien prenne toute la zone du li */
+    color: #fff; /* Couleur du texte */
+    text-align: center;/* Centrer le texte */
+    padding: 14px 16px;/* Espacement */
+}
+
+
+.dropdown {
+    position: relative; /* Nécessaire pour le positionnement absolu du contenu déroulant */
+}
+
+.dropdown-content {
+    display: none;/* Masquer par défaut */
+    position: absolute;/* Positionnement absolu */
+    background-color: #fff;/* Couleur de fond */
+    min-width: 160px;/* Largeur minimale */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);/* Ombre */
+    z-index: 1;/* Au-dessus des autres éléments */
+    border-radius: 8px;/* Bords arrondis */
+    overflow: hidden;/* Pour arrondir les bords des éléments enfants */
+}
+
+.dropdown-content li {
+    width: 100%; /* Prendre toute la largeur du conteneur */
+}
+
+.dropdown-content a {
+    color: #333; /* Couleur du texte */
+    padding: 12px 16px; /* Espacement */
+    display: block; /* Faire en sorte que le lien prenne toute la zone */
+    text-align: left;/* Aligner le texte à gauche */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Couleur au survol */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Afficher le contenu déroulant au survol */
+}
+
+/*Header et Presentation*/
+#presentation {
+    display: flex; /* Utilisation de Flexbox */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center;/* Centrer horizontalement */
+    background-image: url("../images/bandeauc.png");
+    background-size: cover; /* Assure que l'image couvre toute la div */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    width: 100%; /* Prendre toute la largeur */
+    height: 500px; /* Hauteur fixe */
+    font-size: 2rem; /* Taille de la police */
+}
+#intro p {
+    position: relative;/* Pour le positionnement au-dessus du fond */
+    z-index: 1; /* Au-dessus du fond */
+    top: 1rem; /* Décalage vers le bas */
+}
+
+/*Cards*/
+.card {
+    border:#98D7EC solid 4px;/* Bordure bleue */ 
+    background-color: #fff; /* Couleur de fond blanche */
+    border-radius: 16px; /* Bords arrondis */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Ombre */
+    margin: 1rem; /* Espacement autour de la carte */
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* effet sur les cards */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée au survol */
+}
+
+.description.card {
+    display: flex; /* Utilisation de Flexbox */
+    max-width: 600px; /* Largeur maximale */
+}
+
+.description.card img {
+    width: 200px; /* Largeur fixe pour l'image */
+    object-fit: cover; /* Couvre toute la zone sans déformation */
+}
+
+.description.card .card-content {
+    padding: 2rem; /* Espacement intérieur */
+    display: flex; /* Utilisation de Flexbox */
+    flex-direction: column; /* Disposition en colonne */
+    justify-content: center; /* Centrer verticalement */
+}
+
+/*Formulaire de contact*/
+#contact {
+    width: 100%; /* Prendre toute la largeur */
+    max-width: 800px; /* Largeur maximale */
+    border: 4px solid #98D7EC; /* Bordure bleue */
+}
+#formulaire {
+    display: flex; /* Utilisation de Flexbox */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    width: 100%; /* Prendre toute la largeur */
+   
+}
+#contact-form {
+    border: 1px solid #ddd; /* Bordure grise claire */
+    border-radius: 8px; /* Bords arrondis */
+    margin-bottom: 1rem; /* Espacement inférieur */
+    padding: 2rem; /* Espacement intérieur */
+}
+
+#contact h2 {
+    text-align: center; /* Centrer le titre */
+    margin-bottom: 1rem; /* Espacement inférieur */
+}
+
+.form-group {
+    margin-bottom: 1rem; /* Espacement entre les champs */
+}
+
+.form-group label {
+    display: block; /* Faire en sorte que le label prenne toute la largeur */
+    margin-bottom: 0.5rem; /* Espacement inférieur */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Prendre toute la largeur */
+    padding: 10px; /* Espacement intérieur */
+    border: 1px solid #ddd; /* Bordure grise claire */
+    border-radius: 4px; /* Bords arrondis */
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+}
+
+.btn {
+    background-color: green; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement interne*/
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Bords arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur */
+    display: block; /* Pour centrer le bouton */
+    width: fit-content;/* Largeur adaptée au contenu */
+    margin: 0 auto; /* Centrer horizontalement */
+}
+
+.btn:hover {
+    background-color: #555; /* Couleur au survol */
+}
+.obligatoire {
+    color: red; /* Couleur rouge pour indiquer les champs obligatoires */
+}
+
+/*>Footer*/
+footer {
+    background-color: #333; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    padding: 2.3rem 0; /* Espacement  interne*/
+    text-align: center; /* Centrer le texte */
+    width: 100%; /* Prendre toute la largeur */
+
+    position: fixed; /* Positionnement fixe */
+    bottom: 0; 
+    left: 0;
+
+    /* État par défaut : complètement caché */
+    transform: translateY(100%); /* Déplacement vers le bas */
+    transition: transform 0.4s ease; /* Transition douce pour l’apparition */
+
+    pointer-events: none; /* pas de hover tant qu’il est caché */
+}
+
+/* Autorisation d’apparition (bas de page atteint) */
+footer.enabled {
+    transform: translateY(calc(100% - 40px)); /* Légère apparition */
+    pointer-events: auto; 
+}
+
+/* Ton effet hover conservé */
+footer.enabled:hover {
+    transform: translateY(0); /* Complètement visible au survol */
+}
+
+
+/*Cours (E-leazrnig-IA)*/
+.page-title {
+    margin-bottom: 2rem; /* Espacement extérieur */
+    text-align: center; /* Centrer le texte */
+    color: green; /* Couleur du titre */
+}
+
+.course-row {
+    display: flex; /* Utilisation de Flexbox */
+    justify-content: center; /* Centrer les cartes */
+    gap: 2rem;  /* Espacement entre les cartes */
+    flex-wrap: wrap;    /* Permettre le retour à la ligne */
+    margin-bottom: 2rem;    /* Espacement extérieur */
+    width: 100%;    /* Prendre toute la largeur */
+}
+
+.course-card {
+    border:#98D7EC solid 4px;   /* Bordure bleue */
+    width: 300px;   /* Largeur fixe */
+    display: flex;   /* Utilisation de Flexbox */
+    flex-direction: column;  /* Disposition en colonne */
+    background-color: #fff; /* Couleur de fond blanche */
+    border-radius: 8px; /* Bords arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
+    overflow: hidden;   
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Effet sur les cartes */
+}
+
+.course-card:hover {
+    transform: translateY(-5px);    /* Légère élévation au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée au survol */
+}
+
+.course-card img {
+    width: 100%;    /* Prendre toute la largeur */
+    height: 180px;  /* Hauteur fixe */
+    object-fit: cover;  /* Couvre toute la zone sans déformation */
+}
+
+.course-content {
+    padding: 1rem;  /* Espacement intérieur */
+    display: flex;  /* Utilisation de Flexbox */
+    flex-direction: column; /* Disposition en colonne */
+    flex-grow: 1;   /* Permet à la section de croître et remplir l'espace disponible */
+}
+
+.course-title {
+    display: block;  /* Faire en sorte que le titre prenne toute la largeur */
+    font-size: 1.2rem;  /* Taille de la police */
+    font-weight: bold;  /* Gras */
+    margin-bottom: 0.5rem;  /* Espacement inférieur */
+}
+
+.rating {
+    display: block; 
+}
+
+.course-description {
+    display: block; 
+    font-size: 0.9rem;  /* Taille de la police */
+    color: #555;    /* Couleur du texte */
+    flex-grow: 1;   /* Permet à la section de croître et remplir l'espace disponible */
+}
+
+.rating {
+    color: #f5c518; /* Couleur des étoiles */
+    margin-bottom: 0.5rem;  /* Espacement inférieur */
+}
+
+.course-toggle {
+    display: none;  /* Masquer la case à cocher */
+}
+
+.course-detail {
+    display: none;  /* Masquer par défaut */
+    background: #fff;   /* Couleur de fond blanche */
+    border: 1px solid #ddd; /* Bordure grise claire */
+    padding: 2rem;  /* Espacement intérieur */
+    margin: 1rem 0; /* Espacement extérieur */
+    border-radius: 8px; /* Bords arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);   /* Ombre */
+    width: 100%;    /* Prendre toute la largeur */
+    max-width: 800px;   /* Largeur maximale */
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+}
+
+.close-btn {
+    background: linear-gradient(135deg, #4CAF50, #81C784); /* Dégradé moderne */
+    color: #fff; /* Texte blanc lisible */
+    border: none;
+    padding: 12px 24px; /* Plus confortable */
+    border-radius: 12px; /* Arrondi moderne */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Légère profondeur */
+    transition: all 0.3s ease; /* Transition douce pour tout */
+}
+
+.close-btn:hover {
+    transform: translateY(-3px) scale(1.05); /* Légère animation */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Ombre plus prononcée */
+    background: linear-gradient(135deg, #43A047, #66BB6A); /* Dégradé au survol */
+}
+
+
+
+#page.detail-mode .page-title,
+#page.detail-mode hr {
+    display: none;  /* Masquer le titre et la ligne horizontale en mode détail */
+}
+
+#page.detail-mode #introContact,
+
+#page.detail-mode .course-card {
+    display: none;  /* Masquer les cartes de cours et l’introduction en mode détail */
+}
+
+#page.detail-mode .course-toggle:checked + .course-card {
+    display: flex;  /* utilisation de Flexbox */
+    order: 1;   /* Ordre pour l’affichage */
+    margin-top: 5rem;   /* Espacement supérieur */
+    max-width: 800px;   /* Largeur maximale */
+}
+
+#page.detail-mode .course-toggle:checked + .course-card + .course-detail {
+    display: block;
+    order: 2;   /* Ordre pour l’affichage */
+}
+
+#page.detail-mode .course-row {
+    flex-direction: column; /* Disposition en colonne */
+    align-items: center;    /* Centrer les éléments */
+}
+
+#contact::after /*pseudo-élément pour la ligne verticale*/ {
+    content: "";   /* Contenu vide */
+    border-left: 2px solid #98D7EC; /* Bordure gauche bleue */
+    height: 480px;  /* Hauteur de la ligne */
+    margin: 0 40px; /* Espacement horizontal */
+}
+
+#formulaire iframe {
+    border-radius: 16px; /* Bords arrondis */
+    margin: 1rem;   /* Espacement autour de l’iframe */
+    border: none;  /* Supprimer la bordure par défaut */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Ombre */
+}
+#introContact {
+  display: block;      
+  width: fit-content;   /* Ajuste la largeur au contenu */     
+  margin: 1rem auto;   /* Centrer horizontalement */  
+  padding: 2rem;    /* Espacement intérieur */
+  text-align: center;   /* Centrer le texte */
+  background-color: #f9f9f9;    /* Couleur de fond claire */
+  border-radius: 2%;    /* Bords arrondis */
+  border: 4px solid #98D7EC;    /* Bordure bleue */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);    /* Ombre */
+}
+
+
+#introContact p {
+    max-width: 720px;    /* Largeur maximale */
+    margin: 0 auto;  /* Centrer horizontalement */
+    font-size: 1.1rem;  /* Taille de la police */
+    line-height: 1.8;   /* Hauteur de ligne */
+    color: #555;    /* Couleur du texte */
+}
+
+#intro {
+    text-align: center; /* Centrer le texte */
+    padding: 2rem 2rem 0;   /* Espacement intérieur */
+}
+
+.video-container {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;  /* Hauteur initiale */
+    overflow: hidden;   
+    max-width: 800px;   /* Largeur maximale */
+    margin: 2rem auto 0;    /* Centrer horizontalement avec marge supérieure */
+    border-radius: 16px;    /* Bords arrondis */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);      /* Ombre */
+}
+
+
+.video-container video {
+    position: absolute; 
+    top: 0; /* Positionnement en haut */
+    left: 8rem;     /* Décalage depuis la gauche */
+    border-radius: 5%;  /* Bords arrondis */
+    height: 100%;   /* Prendre toute la hauteur */
+    border: none;   /* Supprimer la bordure par défaut */
+}
+
+#introContact h2 {
+    color: green;   /* Couleur du titre */
+    margin-top: 2rem;   /* Espacement supérieur */
+    margin-bottom: 1rem;    /* Espacement inférieur */
+}
+
+#introContact ul {
+    list-style: none;   /* Supprimer les puces */
+    padding-left: 0;    /* Supprimer le padding gauche */
+    margin: 1rem auto;  /* Centrer horizontalement */
+    max-width: 720px;   /* Largeur maximale */
+    text-align: left;   /* Alignement à gauche */
+}
+
+#introContact li {
+    position: relative; /* Nécessaire pour le pseudo-élément */
+    padding-left: 1.5rem;   /* Espacement pour l’icône */
+    margin-bottom: 0.5rem;  /* Espacement inférieur */
+    line-height: 1.6;   /* Hauteur de ligne */
+}
+
+#introContact li::before {
+    content: '✔';  /* Icône de coche */
+    position: absolute; 
+    left: 0;    /* Positionnement à gauche */
+    color: green;   /* Couleur de l’icône */
+}
+.info-ia-container {
+    display: flex;  /* Utilisation de Flexbox */
+    gap: 2rem;  /* Espacement entre les sections */
+    text-align: left;   /* Alignement à gauche */
+    margin-top: 2rem;   /* Espacement supérieur */
+    margin-bottom: 2rem;    /* Espacement inférieur */
+}
+
+.info-ia {
+    flex: 1;    /* Chaque section prend une part égale */
+}
+
+#page, .container {
+    padding-bottom: 5rem;   /* Espacement pour le footer */
+}
+
+#audio-credit-link {
+    border: 4px solid #98D7EC;  /* Bordure bleue */
+    border-radius: 16px;    /* Bords arrondis */
+    padding: 1rem;  /* Espacement intérieur */
+    display: inline-block;  /* Pour que la bordure entoure le texte */
+    margin-top: 1rem;   /* Espacement supérieur */
+    color: #2f4f4f; /* Couleur du texte */
+}
+#audio-credit-link a {
+    color: #2f4f4f; /* Couleur du texte des liens */
+}
+#audio-credit-link a:hover {
+    color: navy ; /* Couleur au survol */
+}
