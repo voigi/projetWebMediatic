@@ -244,7 +244,8 @@ footer {
     position: fixed; /* Positionnement fixe */
     bottom: 0; 
     left: 0;
-    transform: translateY(100%); /* Déplacement vers le bas */
+    transform: translateY(100%);
+ /* Déplacement vers le bas */
     transition: transform 0.4s ease; /* Transition douce pour l’apparition */
     pointer-events: none; /* pas de hover tant qu’il est caché */
 }
@@ -258,6 +259,11 @@ footer.enabled {
 /* Ton effet hover conservé */
 footer.enabled:hover {
     transform: translateY(0); /* Complètement visible au survol */
+}
+.footer-hint {
+    position: relative;
+    bottom: 2.58rem;
+    opacity: 0.8;
 }
 
 /*Cours (E-leazrnig-IA)*/
