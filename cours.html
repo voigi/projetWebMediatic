@@ -55,60 +55,38 @@
         <div class="course-list">
           <div class="course-row">
             <!-- Card 1: Développement Web -->
-            <input
-              type="checkbox"
-              id="course1"
-              class="course-toggle"
-              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked)"
-            />
-            <label for="course1" class="course-card">
-              <img
-                src="images/developpementWeb.jpeg"
-                alt="plusieurs écrans d'ordinateurs"
-              />
-              <span class="course-content">
-                <span class="course-title">Développement Web Avancé</span>
-                <span class="rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="far fa-star"></i>
-                </span>
-                <span class="course-description"
-                  >Maîtrisez les frameworks modernes et construisez des
-                  applications web robustes.</span
-                >
-              </span>
-            </label>
-            <div class="course-detail">
-              <h2>Développement Web Avancé</h2>
-              <p>
-                Contenu détaillé de la leçon : vous apprendrez React, Vue,
-                Node.js, les APIs REST, et comment déployer une application
-                complète.
-              </p>
-              <p><strong>Durée :</strong> 8 semaines</p>
-              <p><strong>Niveau :</strong> Intermédiaire à Avancé</p>
-              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
-              <button
-                href="#"
-                class="close-btn"
-                onclick="document.getElementById('course1').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
-                >Fermer</button
-              >
-            </div>
+<a href="#course1-modal" class="course-card">
+  <img src="images/developpementWeb.jpeg" alt="plusieurs écrans d'ordinateurs" />
+  <span class="course-content">
+    <span class="course-title">Développement Web Avancé</span>
+    <span class="rating">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="far fa-star"></i>
+    </span>
+    <span class="course-description">
+      Maîtrisez les frameworks modernes et construisez des applications web robustes.
+    </span>
+  </span>
+</a>
+
+<div id="course1-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close-btn">&times;</a>
+    <h2>Développement Web Avancé</h2>
+    <p>
+      Contenu détaillé de la leçon : vous apprendrez React, Vue, Node.js, les APIs REST, et comment déployer une application complète.
+    </p>
+    <p><strong>Durée :</strong> 8 semaines</p>
+    <p><strong>Niveau :</strong> Intermédiaire à Avancé</p>
+    <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
+  </div>
+</div>
+
 
             <!-- Card 2: Intelligence Artificielle -->
-            <input
-              type="checkbox"
-              id="course2"
-              class="course-toggle"
-              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked)"
-            />
-            <label for="course2" class="course-card">
-              <img
-                src="images/ia.jpeg"
-                alt="dessin de cerveau et les lettres IA"
-              />
+<a href="#course2-modal" class="course-card">
+  <img src="images/ia.jpeg" alt="dessin de cerveau et les lettres IA" />
               <span class="course-content">
                 <span class="course-title">Introduction à l'IA</span>
                 <span class="rating">
@@ -118,11 +96,13 @@
                 </span>
                 <span class="course-description"
                   >Explorez les fondements de l'intelligence artificielle et ses
-                  applications.</span
-                >
+                  applications.
+                </span>
               </span>
-            </label>
-            <div class="course-detail">
+            </a>
+            <div id="course2-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close-btn">&times;</a>
               <h2>Introduction à l'IA</h2>
               <p>
                 Contenu détaillé de la leçon : découvrez le machine learning, le
@@ -131,22 +111,12 @@
               <p><strong>Durée :</strong> 6 semaines</p>
               <p><strong>Niveau :</strong> Débutant</p>
               <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
-              <button
-                href="#"
-                class="close-btn"
-                onclick="document.getElementById('course2').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
-                >Fermer</button
-              >
+  </div>
             </div>
 
             <!-- Card 3: Cybersécurité -->
-            <input
-              type="checkbox"
-              id="course3"
-              class="course-toggle"
-              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked)"
-            />
-            <label for="course3" class="course-card">
+
+            <a href="#course3-modal" class="course-card">
               <img
                 src="images/cybersecurite.jpeg"
                 alt="bouclier de sécurité avec un cadenas fermé dessus entouré de têtes de mort rouge"
@@ -163,8 +133,10 @@
                   cyberattaques.</span
                 >
               </span>
-            </label>
-            <div class="course-detail">
+            </a>
+            <div id="course3-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close-btn">&times;</a>
               <h2>Cybersécurité</h2>
               <p>
                 Contenu détaillé de la leçon : apprenez les techniques de
@@ -173,26 +145,15 @@
               <p><strong>Durée :</strong> 10 semaines</p>
               <p><strong>Niveau :</strong> Intermédiaire</p>
               <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
-              <button
-                href="#"
-                class="close-btn"
-                onclick="document.getElementById('course3').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
-                >Fermer</button
-              >
-            </div>
+          </div>
           </div>
 
           <hr />
 
-          <div class="course-row">
+          <div class="course-row" id="course-row-2">
+          
             <!-- Card 4: Marketing Digital -->
-            <input
-              type="checkbox"
-              id="course4"
-              class="course-toggle"
-              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked)"
-            />
-            <label for="course4" class="course-card">
+            <a href="#course4-modal" class="course-card">
               <img
                 src="images/marketingDigital.jpeg"
                 alt="portable entouré de plusieurs icones de marketing"
@@ -209,8 +170,12 @@
                   en ligne.</span
                 >
               </span>
-            </label>
-            <div class="course-detail">
+            </a>
+              
+            
+            <div id="course4-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close-btn">&times;</a>
               <h2>Marketing Digital</h2>
               <p>
                 Contenu détaillé de la leçon : SEO, SEM, marketing de contenu et
@@ -219,22 +184,12 @@
               <p><strong>Durée :</strong> 5 semaines</p>
               <p><strong>Niveau :</strong> Débutant</p>
               <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
-              <button
-                href="#"
-                class="close-btn"
-                onclick="document.getElementById('course4').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
-                >Fermer</button
-              >
+           </div>
             </div>
 
+
             <!-- Card 5: Design UI/UX -->
-            <input
-              type="checkbox"
-              id="course5"
-              class="course-toggle"
-              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked)"
-            />
-            <label for="course5" class="course-card">
+            <a href="#course5-modal" class="course-card">
               <img
                 src="images/designUI.jpeg"
                 alt="deux smartphones en face à face qui communiquent"
@@ -251,8 +206,10 @@
                   expérience utilisateur optimale.</span
                 >
               </span>
-            </label>
-            <div class="course-detail">
+            </a>
+            <div id="course5-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close-btn">&times;</a>
               <h2>Design UI/UX</h2>
               <p>
                 Contenu détaillé de la leçon : prototypage, wireframing, et
@@ -261,22 +218,11 @@
               <p><strong>Durée :</strong> 7 semaines</p>
               <p><strong>Niveau :</strong> Intermédiaire</p>
               <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
-              <button
-                href="#"
-                class="close-btn"
-                onclick="document.getElementById('course5').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
-                >Fermer</button
-              >
+              </div>
             </div>
 
             <!-- Card 6: Gestion de Projet Agile -->
-            <input
-              type="checkbox"
-              id="course6"
-              class="course-toggle"
-              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked)"
-            />
-            <label for="course6" class="course-card">
+            <a href="#course6-modal" class="course-card">
               <img
                 src="images/gestionProjet.jpeg"
                 alt="tableau de bord informatique de suivi de projet"
@@ -294,8 +240,10 @@
                   réussis.</span
                 >
               </span>
-            </label>
-            <div class="course-detail">
+            </a>
+            <div id="course6-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close-btn">&times;</a>
               <h2>Gestion de Projet Agile</h2>
               <p>
                 Contenu détaillé de la leçon : sprints, backlogs, et management
@@ -304,12 +252,7 @@
               <p><strong>Durée :</strong> 4 semaines</p>
               <p><strong>Niveau :</strong> Débutant à Intermédiaire</p>
               <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
-              <button
-                href="#"
-                class="close-btn"
-                onclick="document.getElementById('course6').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
-                >Fermer</button
-              >
+             </div>
             </div>
           </div>
         </div>

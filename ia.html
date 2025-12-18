@@ -81,13 +81,7 @@
         <div class="course-list">
           <div class="course-row">
             <!-- Card 1: L'IA pour tous -->
-            <input
-              type="checkbox"
-              id="course1"
-              class="course-toggle"
-              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked); if(this.checked) { document.querySelector('.courses-section').scrollIntoView({ behavior: 'smooth' }); }"
-            />
-            <label for="course1" class="course-card">
+           <a href="#course1-modal" class="course-card">
               <img
                 src="images/ia.jpeg"
                 alt="dessin de cerveau et les lettres IA"
@@ -104,8 +98,10 @@
                   applications.</span
                 >
               </span>
-            </label>
-        <div class="course-detail">
+            </a>
+        <div id="course1-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close-btn">&times;</a>
               <h2>Introduction à l'IA</h2>
               <p>
                 Contenu détaillé de la leçon : découvrez le machine learning, le
@@ -114,22 +110,12 @@
               <p><strong>Durée :</strong> 6 semaines</p>
               <p><strong>Niveau :</strong> Débutant</p>
               <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
-              <button
-                href="#"
-                class="close-btn"
-                onclick="document.getElementById('course1').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
-                >Fermer</button
-              >
+  </div>
             </div>
 
             <!-- Card 2: Apprentissage Automatique -->
-            <input
-              type="checkbox"
-              id="course2"
-              class="course-toggle"
-              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked); if(this.checked) { document.querySelector('.courses-section').scrollIntoView({ behavior: 'smooth' }); }"
-            />
-            <label for="course2" class="course-card">
+            <a href="#course2-modal" class="course-card">
+              
               <img
                 src="images/stanford.jpeg"
                 alt="logo Stanford"
@@ -146,8 +132,10 @@
                   l'Université de Stanford.</span
                 >
               </span>
-            </label>
-            <div class="course-detail">
+            </a>
+            <div id="course2-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close-btn">&times;</a>
               <h2>Apprentissage Automatique</h2>
               <p>
                 Contenu détaillé de la leçon : Le cours de Machine Learning par
@@ -157,22 +145,11 @@
               <p><strong>Durée :</strong> 11 semaines</p>
               <p><strong>Niveau :</strong> Débutant à Intermédiaire</p>
               <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
-              <button
-                href="#"
-                class="close-btn"
-                onclick="document.getElementById('course2').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
-                >Fermer</button
-              >
+             </div>
             </div>
 
             <!-- Card 3: Deep Learning Pratique -->
-            <input
-              type="checkbox"
-              id="course3"
-              class="course-toggle"
-              onclick="document.getElementById('page').classList.toggle('detail-mode', this.checked); if(this.checked) { document.querySelector('.courses-section').scrollIntoView({ behavior: 'smooth' }); }"
-            />
-            <label for="course3" class="course-card">
+            <a href="#course3-modal" class="course-card">
               <img
                 src="images/deepLearningPratique.jpeg"
                 alt="dessin de cerveau avec des livres sur plusieurs niveaux d'IA"
@@ -189,8 +166,10 @@
                   modèles dès le début.</span
                 >
               </span>
-            </label>
-            <div class="course-detail">
+            </a>
+            <div id="course3-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close-btn">&times;</a>
               <h2>Deep Learning Pratique</h2>
               <p>
                 Contenu détaillé de la leçon : Une approche pratique pour
@@ -200,13 +179,7 @@
               <p><strong>Durée :</strong> 7 semaines</p>
               <p><strong>Niveau :</strong> Intermédiaire</p>
               <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
-              <button
-                href="#"
-                class="close-btn"
-                onclick="document.getElementById('course3').checked = false; document.getElementById('page').classList.remove('detail-mode'); return false;"
-                >Fermer</button
-              >
-            </div>
+             </div>
           </div>
         </div>
       </section>

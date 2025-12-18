@@ -276,24 +276,28 @@ footer.enabled:hover {
 }
 
 .course-row {
-    display: flex; /* Utilisation de Flexbox */
-    justify-content: center; /* Centrer les cartes */
-    gap: 2rem;  /* Espacement entre les cartes */
-    flex-wrap: wrap;    /* Permettre le retour à la ligne */
-    margin-bottom: 2rem;    /* Espacement extérieur */
-    width: 100%;    /* Prendre toute la largeur */
+    display: flex;
+    flex-wrap: wrap;          /* Permet le retour à la ligne */
+    justify-content: center;  /* Centre les lignes de cartes */
+    margin: 0 auto 2rem;      /* Centre le conteneur et ajoute un espacement en bas */
+    gap: 2rem;
+                  /* Espacement entre les cartes */
+}
+#course-row-2 {
+    margin-left: 7.1%;      /* Espacement inférieur pour la deuxième rangée */
 }
 
 .course-card {
-    border:#98D7EC solid 4px;   /* Bordure bleue */
-    width: 300px;   /* Largeur fixe */
-    display: flex;   /* Utilisation de Flexbox */
-    flex-direction: column;  /* Disposition en colonne */
-    background-color: #fff; /* Couleur de fond blanche */
-    border-radius: 8px; /* Bords arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
+    flex: 0 0 300px;          /* Largeur fixe et ne rétrécit pas */
+    display: flex;             
+    flex-direction: column;    
+    background-color: #fff;    
+    border: 4px solid #98D7EC; /* Bordure bleue */
+    border-radius: 8px;       
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;   
-    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Effet sur les cartes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;      /* Espacement vertical entre les lignes */
 }
 
 .course-card:hover {
@@ -417,25 +421,58 @@ footer.enabled:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Ombre */
 }
 #introContact {
-  display: block;      
-  width: fit-content;   /* Ajuste la largeur au contenu */     
-  margin: 1rem auto;   /* Centrer horizontalement */  
-  padding: 2rem;    /* Espacement intérieur */
-  text-align: center;   /* Centrer le texte */
-  background-color: #f9f9f9;    /* Couleur de fond claire */
-  border-radius: 2%;    /* Bords arrondis */
-  border: 4px solid #98D7EC;    /* Bordure bleue */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);    /* Ombre */
+    display: block;
+    width: 90%;                  /* Largeur responsive */
+    max-width: 800px;            /* Largeur maximale */
+    margin: 2rem auto;           /* Centré horizontalement avec marge verticale */
+    padding: 2.5rem 2rem;        /* Plus d'espace à l'intérieur */
+    background-color: #f9f9f9;   /* Couleur de fond */
+    border: 4px solid #98D7EC;   /* Bordure bleue conservée */
+    border-radius: 16px;         /* Bords plus arrondis pour un look moderne */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); /* Ombre douce pour effet flottant */
+    text-align: center;          /* Texte centré */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Interaction au hover */
 }
 
+/* Effet hover subtil */
+#introContact:hover {
+    transform: translateY(-3px);       /* Légère élévation */
+    box-shadow: 0 16px 32px rgba(0,0,0,0.18); /* Ombre plus prononcée */
+}
 
+/* Paragraphes à l'intérieur */
 #introContact p {
-    max-width: 720px;    /* Largeur maximale */
-    margin: 0 auto;  /* Centrer horizontalement */
-    font-size: 1.1rem;  /* Taille de la police */
-    line-height: 1.8;   /* Hauteur de ligne */
-    color: #555;    /* Couleur du texte */
+    max-width: 700px;
+    margin: 1rem auto;    /* Centré horizontalement */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
 }
+
+/* Liste à l'intérieur */
+#introContact ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1.5rem auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+#introContact li {
+    position: relative;
+    padding-left: 1.8rem;   /* Espace pour l’icône */
+    margin-bottom: 0.7rem;
+    line-height: 1.6;
+}
+
+#introContact li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #43A047;          /* Vert plus moderne pour l’icône */
+    font-weight: bold;
+}
+
 
 #intro {
     text-align: center; /* Centrer le texte */
@@ -519,4 +556,81 @@ footer.enabled:hover {
 }
 #audio-credit-link a:hover {
     color: navy ; /* Couleur au survol */
+}
+/* ------------------ MODAL MODERNE ------------------ */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+    border: 4px solid #98D7EC;
+}
+
+.close-btn {
+    all: unset;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    background: linear-gradient(135deg, #4CAF50, #81C784);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    background: linear-gradient(135deg, #43A047, #66BB6A);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.modal-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+section a{
+    color: #333338;
+}
+section a:hover {
+    color: #333338; /* Couleur au survol */
 }
