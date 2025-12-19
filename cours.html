@@ -1,274 +1,248 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Learning</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
-    />
-    <script src="js/footer.js" defer></script>
-    <!-- Ajout de Font Awesome pour les icônes d'étoiles -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <nav>
-      <div id="logo">
-        <a href="index.html"
-          ><img
-            src="images/logoNav.png"
-            alt="Logo"
-            width="200"
-            height="24"
-        /></a>
-      </div>
-      <ul>
-        <li class="dropdown">
-          <a href="#">Nos Services</a>
-          <ul class="dropdown-content">
-             <li><a href="cours.html">E-Learning</a></li> 
-            <li><a href="ia.html">IA</a></li>  
-          </ul>
-        </li>
-        <li><a href="team.html">Notre Team</a></li>
-        <li><a href="contact.html">Nous contacter</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8"> <!-- Déclaration de l'encodage -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Pour le responsive design -->
+  <title>E-Learning</title> <!-- Titre de la page -->
+  <meta name="description" content="Explorez nos formations en ligne couvrant divers domaines technologiques et développez vos compétences avec nos cours interactifs.">
+  <!-- Description pour les moteurs de recherche -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico"> <!-- Favicon (image dans l'onglet du navigateur)-->
+  <link rel="stylesheet" href="css/style.css"> <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <!-- Lien vers les icônes Phosphor regular -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <!-- Lien vers les icônes Phosphor fill -->
+  <script src="js/footer.js" defer></script>
+  <!-- Ajout de Font Awesome pour les icônes d'étoiles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Lien vers le fichier CSS de Font Awesome -->
+</head>
 
-    <main id="page">
-      <h1 class="page-title">Nos Formations Populaires</h1>
+<body>
+  <nav>
+    <div id="logo">
+      <a href="index.html"><img src="images/logoNav.png" alt="Logo" width="200" height="24"></a>
+      <!-- Lien vers la page d'accueil -->
+    </div>
+    <ul>
+      <li class="dropdown"> <!-- Menu déroulant pour Nos Services -->
+        <a href="#">Nos Services</a>
+        <ul class="dropdown-content">
+          <li><a href="cours.html">E-Learning</a></li> <!-- Lien vers la page des cours -->
+          <li><a href="ia.html">IA</a></li> <!-- Lien vers la page IA -->
+        </ul>
+      </li>
+      <li><a href="team.html">Notre Team</a></li> <!-- Lien vers la page de l'équipe -->
+      <li><a href="contact.html">Nous contacter</a></li> <!-- Lien vers la page de contact -->
+    </ul>
+  </nav>
 
-      <section class="courses-section">
-        <div class="course-list">
-          <div class="course-row">
-            <!-- Card 1: Développement Web -->
-<a href="#course1-modal" class="course-card">
-  <img src="images/developpementWeb.jpeg" alt="plusieurs écrans d'ordinateurs" />
-  <span class="course-content">
-    <span class="course-title">Développement Web Avancé</span>
-    <span class="rating">
-      <i class="fas fa-star"></i><i class="fas fa-star"></i>
-      <i class="fas fa-star"></i><i class="fas fa-star"></i>
-      <i class="far fa-star"></i>
-    </span>
-    <span class="course-description">
-      Maîtrisez les frameworks modernes et construisez des applications web robustes.
-    </span>
-  </span>
-</a>
+  <main id="page">
+    <h1 class="page-title">Nos Formations Populaires</h1> <!-- Titre de la page -->
 
-<div id="course1-modal" class="modal">
-  <div class="modal-content">
-    <a href="#" class="close-btn">&times;</a>
-    <h2>Développement Web Avancé</h2>
-    <p>
-      Contenu détaillé de la leçon : vous apprendrez React, Vue, Node.js, les APIs REST, et comment déployer une application complète.
-    </p>
-    <p><strong>Durée :</strong> 8 semaines</p>
-    <p><strong>Niveau :</strong> Intermédiaire à Avancé</p>
-    <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
-  </div>
-</div>
-
-
-            <!-- Card 2: Intelligence Artificielle -->
-<a href="#course2-modal" class="course-card">
-  <img src="images/ia.jpeg" alt="dessin de cerveau et les lettres IA" />
-              <span class="course-content">
-                <span class="course-title">Introduction à l'IA</span>
-                <span class="rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star-half-alt"></i>
-                </span>
-                <span class="course-description"
-                  >Explorez les fondements de l'intelligence artificielle et ses
-                  applications.
-                </span>
+    <section class="courses-section"> <!-- Section des cours -->
+      <div class="course-list"> <!-- Liste des cours -->
+        <div class="course-row"> <!-- Première rangée de cours -->
+          <!-- Card 1: Développement Web -->
+          <a href="#course1-modal" class="course-card"> <!-- Lien vers le modal du cours 1 -->
+            <img src="images/developpementWeb.jpeg" alt="plusieurs écrans d'ordinateurs"> <!-- Image de la carte -->
+            <span class="course-content"> <!-- Contenu de la carte -->
+              <span class="course-title">Développement Web Avancé</span> <!-- Titre du cours -->
+              <span class="rating"> <!-- Évaluation par étoiles -->
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
               </span>
-            </a>
-            <div id="course2-modal" class="modal">
-  <div class="modal-content">
-    <a href="#" class="close-btn">&times;</a>
-              <h2>Introduction à l'IA</h2>
+              <span class="course-description"> <!-- Description du cours -->
+                Maîtrisez les frameworks modernes et construisez des applications web robustes.
+              </span>
+            </span>
+          </a>
+
+          <div id="course1-modal" class="modal"> <!-- Modal pour le cours 1 -->
+            <div class="modal-content">
+              <a href="#" class="close-btn">&times;</a> <!-- Bouton de fermeture du modal -->
+              <h2>Développement Web Avancé</h2> <!-- Titre du cours dans le modal -->
               <p>
+                Contenu détaillé de la leçon : vous apprendrez React, Vue, Node.js, les APIs REST, et comment déployer
+                une application complète.
+              </p>
+              <p><strong>Durée :</strong> 8 semaines</p> <!-- Durée du cours -->
+              <p><strong>Niveau :</strong> Intermédiaire à Avancé</p> <!-- Niveau du cours -->
+              <p><i class="ph ph-certificate"></i> Formation Certifiante</p> <!-- Indication de certification -->
+            </div>
+          </div>
+
+
+          <!-- Card 2: Intelligence Artificielle -->
+          <a href="#course2-modal" class="course-card"> <!-- Lien vers le modal du cours 2 -->
+            <img src="images/ia.jpeg" alt="dessin de cerveau et les lettres IA"> <!-- Image de la carte -->
+            <span class="course-content"> <!-- Contenu de la carte -->
+              <span class="course-title">Introduction à l'IA</span> <!-- Titre du cours -->
+              <span class="rating"> <!-- Évaluation par étoiles -->
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i> <!-- Demi-étoile -->
+              </span>
+              <span class="course-description">
+                Explorez les fondements de l'intelligence artificielle et ses
+                applications.
+              </span>
+            </span>
+          </a>
+          <div id="course2-modal" class="modal"> <!-- Modal pour le cours 2 -->
+            <div class="modal-content"> <!-- Contenu du modal -->
+              <a href="#" class="close-btn">&times;</a> <!-- Bouton de fermeture du modal -->
+              <h2>Introduction à l'IA</h2> <!-- Titre du cours dans le modal -->
+              <p> <!-- Paragraphe de description -->
                 Contenu détaillé de la leçon : découvrez le machine learning, le
                 deep learning, et les réseaux de neurones.
               </p>
-              <p><strong>Durée :</strong> 6 semaines</p>
-              <p><strong>Niveau :</strong> Débutant</p>
-              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
-  </div>
+              <p><strong>Durée :</strong> 6 semaines</p> <!-- Durée du cours -->
+              <p><strong>Niveau :</strong> Débutant</p> <!-- Niveau du cours -->
+              <p><i class="ph ph-certificate"></i> Formation Certifiante</p> <!-- Indication de certification -->
             </div>
+          </div>
 
-            <!-- Card 3: Cybersécurité -->
+          <!-- Card 3: Cybersécurité -->
 
-            <a href="#course3-modal" class="course-card">
-              <img
-                src="images/cybersecurite.jpeg"
-                alt="bouclier de sécurité avec un cadenas fermé dessus entouré de têtes de mort rouge"
-              />
-              <span class="course-content">
-                <span class="course-title">Cybersécurité</span>
-                <span class="rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="far fa-star"></i>
-                </span>
-                <span class="course-description"
-                  >Protégez les systèmes d'information contre les
-                  cyberattaques.</span
-                >
+          <a href="#course3-modal" class="course-card"> <!-- Lien vers le modal du cours 3 -->
+            <img src="images/cybersecurite.jpeg" alt="bouclier de sécurité avec un cadenas fermé dessus entouré de têtes de mort rouge">
+            <!-- Image de la carte -->
+            <span class="course-content"> <!-- Contenu de la carte -->
+              <span class="course-title">Cybersécurité</span> <!-- Titre du cours -->
+              <span class="rating"> <!-- Évaluation par étoiles -->
+                <i class="fas fa-star"></i><i class="fas fa-star"></i> <!-- Trois étoiles pleines -->
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
               </span>
-            </a>
-            <div id="course3-modal" class="modal">
-  <div class="modal-content">
-    <a href="#" class="close-btn">&times;</a>
-              <h2>Cybersécurité</h2>
+              <span class="course-description">Protégez les systèmes d'information contre les
+                cyberattaques.</span>
+            </span>
+          </a>
+          <div id="course3-modal" class="modal"> <!-- Modal pour le cours 3 -->
+            <div class="modal-content"> <!-- Contenu du modal -->
+              <a href="#" class="close-btn">&times;</a> <!-- Bouton de fermeture du modal -->
+              <h2>Cybersécurité</h2> <!-- Titre du cours dans le modal -->
               <p>
                 Contenu détaillé de la leçon : apprenez les techniques de
                 pentesting, la cryptographie, et la sécurisation des réseaux.
-              </p>
-              <p><strong>Durée :</strong> 10 semaines</p>
-              <p><strong>Niveau :</strong> Intermédiaire</p>
-              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
+              </p> <!-- Paragraphe de description -->
+              <p><strong>Durée :</strong> 10 semaines</p> <!-- Durée du cours -->
+              <p><strong>Niveau :</strong> Intermédiaire</p> <!-- Niveau du cours -->
+              <p><i class="ph ph-certificate"></i> Formation Certifiante</p> <!-- Indication de certification -->
+            </div>
           </div>
-          </div>
+        </div>
 
-          <hr />
+          <hr>
 
-          <div class="course-row" id="course-row-2">
-          
+          <div class="course-row" id="course-row-2"> <!-- Deuxième rangée de cours -->
+
             <!-- Card 4: Marketing Digital -->
-            <a href="#course4-modal" class="course-card">
-              <img
-                src="images/marketingDigital.jpeg"
-                alt="portable entouré de plusieurs icones de marketing"
-              />
-              <span class="course-content">
+            <a href="#course4-modal" class="course-card"> <!-- Lien vers le modal du cours 4 -->
+              <img src="images/marketingDigital.jpeg" alt="portable entouré de plusieurs icones de marketing">
+              <!-- Image de la carte -->
+              <span class="course-content"> <!-- Contenu de la carte -->
                 <span class="course-title">Marketing Digital</span>
                 <span class="rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="far fa-star"></i
-                  ><i class="far fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="far fa-star"></i>
+                  <i class="far fa-star"></i> <!-- Deux étoiles vides -->
                 </span>
-                <span class="course-description"
-                  >Apprenez à promouvoir efficacement des produits et services
-                  en ligne.</span
-                >
+                <span class="course-description">Apprenez à promouvoir efficacement des produits et services
+                  en ligne.</span>
               </span>
             </a>
-              
-            
-            <div id="course4-modal" class="modal">
-  <div class="modal-content">
-    <a href="#" class="close-btn">&times;</a>
-              <h2>Marketing Digital</h2>
-              <p>
-                Contenu détaillé de la leçon : SEO, SEM, marketing de contenu et
-                réseaux sociaux.
-              </p>
-              <p><strong>Durée :</strong> 5 semaines</p>
-              <p><strong>Niveau :</strong> Débutant</p>
-              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
-           </div>
+            <div id="course4-modal" class="modal"> <!-- Modal pour le cours 4 -->
+              <div class="modal-content"> <!-- Contenu du modal -->
+                <a href="#" class="close-btn">&times;</a> <!-- Bouton de fermeture du modal -->
+                <h2>Marketing Digital</h2> <!-- Titre du cours dans le modal -->
+                <p>
+                  Contenu détaillé de la leçon : SEO, SEM, marketing de contenu et
+                  réseaux sociaux.
+                </p> <!-- Paragraphe de description -->
+                <p><strong>Durée :</strong> 5 semaines</p> <!-- Durée du cours -->
+                <p><strong>Niveau :</strong> Débutant</p> <!-- Niveau du cours -->
+                <p><i class="ph ph-certificate"></i> Formation Certifiante</p> <!-- Indication de certification -->
+              </div>
             </div>
 
 
             <!-- Card 5: Design UI/UX -->
-            <a href="#course5-modal" class="course-card">
-              <img
-                src="images/designUI.jpeg"
-                alt="deux smartphones en face à face qui communiquent"
-              />
+            <a href="#course5-modal" class="course-card"> <!-- Lien vers le modal du cours 5 -->
+              <img src="images/designUI.jpeg" alt="deux smartphones en face à face qui communiquent">
+              <!-- Image de la carte -->
               <span class="course-content">
-                <span class="course-title">Design UI/UX</span>
+                <span class="course-title">Design UI/UX</span> <!-- Titre du cours -->
                 <span class="rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="far fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="far fa-star"></i> <!-- Quatre étoiles pleines et une vide -->
                 </span>
-                <span class="course-description"
-                  >Concevez des interfaces utilisateur intuitives et une
-                  expérience utilisateur optimale.</span
-                >
+                <span class="course-description"> <!-- Description du cours -->
+                  Concevez des interfaces utilisateur intuitives et une
+                  expérience utilisateur optimale.</span>
               </span>
             </a>
-            <div id="course5-modal" class="modal">
-  <div class="modal-content">
-    <a href="#" class="close-btn">&times;</a>
-              <h2>Design UI/UX</h2>
-              <p>
-                Contenu détaillé de la leçon : prototypage, wireframing, et
-                tests utilisateurs avec Figma.
-              </p>
-              <p><strong>Durée :</strong> 7 semaines</p>
-              <p><strong>Niveau :</strong> Intermédiaire</p>
-              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
+            <div id="course5-modal" class="modal"> <!-- Modal pour le cours 5 -->
+              <div class="modal-content"> <!-- Contenu du modal -->
+                <a href="#" class="close-btn">&times;</a> <!-- Bouton de fermeture du modal -->
+                <h2>Design UI/UX</h2> <!-- Titre du cours dans le modal -->
+                <p>
+                  Contenu détaillé de la leçon : prototypage, wireframing, et
+                  tests utilisateurs avec Figma.
+                </p> <!-- Paragraphe de description -->
+                <p><strong>Durée :</strong> 7 semaines</p> <!-- Durée du cours -->
+                <p><strong>Niveau :</strong> Intermédiaire</p> <!-- Niveau du cours -->
+                <p><i class="ph ph-certificate"></i> Formation Certifiante</p> <!-- Indication de certification -->
               </div>
             </div>
 
             <!-- Card 6: Gestion de Projet Agile -->
-            <a href="#course6-modal" class="course-card">
-              <img
-                src="images/gestionProjet.jpeg"
-                alt="tableau de bord informatique de suivi de projet"
-              />
-              <span class="course-content">
-                <span class="course-title">Gestion de Projet Agile</span>
+            <a href="#course6-modal" class="course-card"> <!-- Lien vers le modal du cours 6 -->
+              <img src="images/gestionProjet.jpeg" alt="tableau de bord informatique de suivi de projet">
+              <!-- Image de la carte -->
+              <span class="course-content"> <!-- Contenu de la carte -->
+                <span class="course-title">Gestion de Projet Agile</span> <!-- Titre du cours -->
                 <span class="rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i
-                  ><i class="fas fa-star-half-alt"></i
-                  ><i class="far fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i> <!-- Quatre étoiles et demie -->
                 </span>
-                <span class="course-description"
-                  >Adoptez les méthodologies Scrum et Kanban pour des projets
-                  réussis.</span
-                >
+                <span class="course-description"> <!-- Description du cours -->
+                  Adoptez les méthodologies Scrum et Kanban pour des projets
+                  réussis.</span>
               </span>
             </a>
-            <div id="course6-modal" class="modal">
-  <div class="modal-content">
-    <a href="#" class="close-btn">&times;</a>
-              <h2>Gestion de Projet Agile</h2>
-              <p>
-                Contenu détaillé de la leçon : sprints, backlogs, et management
-                d'équipe avec Jira.
-              </p>
-              <p><strong>Durée :</strong> 4 semaines</p>
-              <p><strong>Niveau :</strong> Débutant à Intermédiaire</p>
-              <p><i class="ph ph-certificate"></i> Formation Certifiante</p>
-             </div>
+            <div id="course6-modal" class="modal"> <!-- Modal pour le cours 6 -->
+              <div class="modal-content"> <!-- Contenu du modal -->
+                <a href="#" class="close-btn">&times;</a> <!-- Bouton de fermeture du modal -->
+                <h2>Gestion de Projet Agile</h2> <!-- Titre du cours dans le modal -->
+                <p>
+                  Contenu détaillé de la leçon : sprints, backlogs, et management
+                  d'équipe avec Jira.
+                </p> <!-- Paragraphe de description -->
+                <p><strong>Durée :</strong> 4 semaines</p> <!-- Durée du cours -->
+                <p><strong>Niveau :</strong> Débutant à Intermédiaire</p> <!-- Niveau du cours -->
+                <p><i class="ph ph-certificate"></i> Formation Certifiante</p> <!-- Indication de certification -->
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+    </section>
+  </main>
 
-    <footer>
-      <p class="footer-hint">Pied de page – survolez pour afficher</p>
-      <div class="footer-content">
-        <div class="social-links">
-          <a href="#">Facebook</a>
-          <a href="#">Twitter</a>
-          <a href="#">Instagram</a>
-        </div>
-        <p>&copy; 2025 Mon Entreprise. Tous droits réservés.</p>
+  <footer>
+    <p class="footer-hint">Pied de page – survolez pour afficher</p> <!-- Indication pour le pied de page -->
+    <div class="footer-content"> <!-- Contenu du pied de page -->
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
       </div>
-    </footer>
-  </body>
+      <p>&copy; 2025 Mon Entreprise. Tous droits réservés.</p> <!-- Droits d'auteur -->
+    </div>
+  </footer>
+</body>
+
 </html>
