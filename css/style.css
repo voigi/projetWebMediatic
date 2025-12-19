@@ -284,9 +284,7 @@ footer.enabled:hover {
     gap: 2rem;                /* Espacement entre les cartes */
 }
 
-#course-row-2 {
-    margin-left: 7.1%;      /* Espacement inférieur pour la deuxième rangée */
-}
+
 
 .course-card {
     flex: 0 0 300px;          /* Largeur fixe et ne rétrécit pas */
